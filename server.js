@@ -42,7 +42,7 @@ var corsOptions = {
   origin: true,
   credentials: false // <-- REQUIRED backend setting
 };
-app.use(cors(corsOptions));
+app.options('*', cors())
 
 server.applyMiddleware({
   app,
