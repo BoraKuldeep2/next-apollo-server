@@ -45,7 +45,7 @@ var corsOptions = {
 server.applyMiddleware({
   app,
   path: '/',
-  cors: true, // disables the apollo-server-express cors to allow the cors middleware use
+  cors: false, // disables the apollo-server-express cors to allow the cors middleware use
 })
 
 app.use(cors(corsOptions));
