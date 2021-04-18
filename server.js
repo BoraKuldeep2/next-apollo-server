@@ -40,7 +40,7 @@ var corsOptions = {
   origin: true,
   credentials: false
 };
-
+app.use(cors());
 
 server.applyMiddleware({
   app,
@@ -48,7 +48,7 @@ server.applyMiddleware({
   cors: true, // disables the apollo-server-express cors to allow the cors middleware use
 })
 
-app.use(cors());
+
 
 const port = process.env.PORT || 5000
 app.listen(port, (err) => {
