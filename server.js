@@ -4,8 +4,6 @@ const typeDefs = require('./schema');
 const casual = require('casual');
 const cors = require('cors');
 const {  ApolloServer } = require('apollo-server-express');
-const bodyParser = require('body-parser');
-const { makeExecutableSchema } = require('graphql-tools');
 
 const getUser = () => ({
   name: casual.name,
