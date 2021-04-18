@@ -39,7 +39,7 @@ const server = new ApolloServer({ typeDefs, resolvers });
 //const myGraphQLSchema = makeExecutableSchema({ typeDefs, resolvers })
 const app = express();
 var corsOptions = {
-  origin: '*',
+  origin: true,
   credentials: false // <-- REQUIRED backend setting
 };
 app.use(cors(corsOptions));
