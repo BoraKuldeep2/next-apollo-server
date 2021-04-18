@@ -1,0 +1,13 @@
+{
+  "name": "apollo-next-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "apollo-server": "^2.23.0",
+    "casual": "^1.6.2",
+    "graphql": "^15.5.0"
+  }
+}
