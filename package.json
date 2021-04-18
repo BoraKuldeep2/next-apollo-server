@@ -6,7 +6,6 @@
     "start": "node server"
   },
   "dependencies": {
-    "apollo-server": "^2.23.0",
     "apollo-server-express": "^2.23.0",
     "casual": "^1.6.2",
     "cors": "^2.8.5",
