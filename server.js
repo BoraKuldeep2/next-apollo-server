@@ -33,7 +33,7 @@ const resolvers = {
   }
 };
 
-const server = new ApolloServer({ cors: true, typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
 var corsOptions = {
@@ -48,7 +48,7 @@ server.applyMiddleware({
   cors: true, // disables the apollo-server-express cors to allow the cors middleware use
 })
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 const port = process.env.PORT || 5000
 app.listen(port, (err) => {
