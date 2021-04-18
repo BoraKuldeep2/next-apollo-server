@@ -42,7 +42,7 @@ var corsOptions = {
   origin: true,
   credentials: false // <-- REQUIRED backend setting
 };
-app.options('*', cors())
+
 
 server.applyMiddleware({
   app,
@@ -53,7 +53,7 @@ server.applyMiddleware({
 //app.use('/', express.json(), graphqlExpress({ schema: myGraphQLSchema }));
 //app.get('/', graphiqlExpress({ endpointURL: '/' }))
 
-
+app.use(cors());
 
 const port = process.env.PORT || 5000
 app.listen(port, (err) => {
