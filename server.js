@@ -31,7 +31,7 @@ const resolvers = {
   }
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ cors: true, typeDefs, resolvers });
 
 server.listen().then(() => {
   console.log(`
