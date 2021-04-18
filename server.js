@@ -37,8 +37,8 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
 var corsOptions = {
-  origin: true,
-  credentials: false
+  origin: "https://next-apollo-client-kappa.vercel.app/",
+  credentials: true
 };
 
 
