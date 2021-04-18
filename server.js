@@ -33,7 +33,7 @@ const resolvers = {
   }
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ cors: true, typeDefs, resolvers });
 
 const app = express();
 var corsOptions = {
@@ -45,7 +45,7 @@ var corsOptions = {
 server.applyMiddleware({
   app,
   path: '/',
-  cors: false, // disables the apollo-server-express cors to allow the cors middleware use
+  cors: true, // disables the apollo-server-express cors to allow the cors middleware use
 })
 
 app.use(cors(corsOptions));
